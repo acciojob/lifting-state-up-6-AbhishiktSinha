@@ -9,13 +9,13 @@ const TodoList = ({todos, handleComplete})=>{
                 todos.map((item)=>{
 
                     return (
-                        <div key={item.id}>
+                        <li key={item.id}>
                             <span>{item.title}</span>
 
                             {!item.completed && (
                                 <button onClick={()=>handleComplete(item.id)}>Complete</button>
                             )}
-                        </div>
+                        </li>
                     )
                 })
             }
